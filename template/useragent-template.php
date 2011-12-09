@@ -33,18 +33,14 @@
 			?>
 		</tbody>
 	</table>
-	<div id="icon-themes" class="icon32"><br></div>
-	<h2 class="nav-tab-wrapper">
-		<a href="#" class="nav-tab nav-tab-active">Themes by browser</a>
-		<a href="#" class="nav-tab">Themes by class</a>
-	</h2>
+	<h2>Sync browser with theme</h2>
 	<div style="overflow: hidden;">
 		<div id="browsers" class="postbox uafilters">
 			<?php
 				$countBrowersWithoutTheme = count($browsersWithoutTheme);
 
 				for($i = 0; $i < $countBrowersWithoutTheme; $i++) {
-					echo '<div><img src="'.$pathToIcon.$browsersWithoutTheme[$i]->getCode().'.png" alt="'.$browsersWithoutTheme[$i]->getCode().'" />'.$browsersWithoutTheme[$i]->getName().'</div>';
+					echo '<img src="'.$pathToIcon.$browsersWithoutTheme[$i]->getCode().'.png" />';
 				}
 			?>
 		</div>
@@ -168,10 +164,7 @@
 <br/>
 <script type="text/javascript">
 	jQuery(document).ready(function() {
-		jQuery("#browsers > div, #filters > div").draggable({
-			zIndex: 1000,
-			revert: true
-		});
+		jQuery("#browsers > img, #filters > img").draggable();
 
 		jQuery("#filters").droppable({
 			drop: function( event, ui ) {
