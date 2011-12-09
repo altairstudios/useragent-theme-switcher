@@ -1,16 +1,17 @@
 #browsers {
-	width: 48%;
-	height: 300px;
 	float: left;
 }
 
 #filters {
-	width: 48%;
-	height: 300px;
 	float: right;
 }
 
-.uafilters img {
+.uafilters {
+	min-height: 120px;
+	width: 49%;
+}
+
+.uafilters > div {
 	margin: 10px;
 	border: solid 1px #DFDFDF;
 	-moz-border-radius: 3px;
@@ -18,4 +19,16 @@
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	z-index: 999;
+	cursor: pointer;
+	width: 100px;
+	height: 100px;
+	background: #ffffff;
+	text-align: center;
+	float: left;
+}
+
+.uafilters > div > img {
+	clear: both;
+	display: block;
+	margin: 10px auto 10px auto;
 }
